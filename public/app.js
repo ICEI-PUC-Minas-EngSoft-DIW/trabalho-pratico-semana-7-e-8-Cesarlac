@@ -41,7 +41,7 @@ function carregarCards() {
     if (carroDestaque) {
         const destaqueHtml = `
             <article class="artigo-destaque">
-                <a href="#" class="link-artigo">
+                <a href="detalhes.html?id=${carroDestaque.id}" class="link-artigo">
                     <img src="${carroDestaque.imagem}" alt="${carroDestaque.titulo}">
                     <div class="texto-artigo-principal">
                         <h1>${carroDestaque.titulo}</h1>
@@ -58,7 +58,7 @@ function carregarCards() {
     outrosCarros.forEach(carro => {
         const cardHtml = `
             <article class="artigo-inferior">
-                <a href="#" class="link-artigo">
+                <a href="detalhes.html?id=${carro.id}" class="link-artigo">
                     <img src="${carro.imagem}" alt="${carro.titulo}">
                     <div class="texto-artigo">
                         <h2>${carro.titulo}</h2>
@@ -72,3 +72,40 @@ function carregarCards() {
 }
 
 document.addEventListener('DOMContentLoaded', carregarCards);
+
+function carregarDetalhes() {
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const carroId = urlParams.get('id');
+
+    const carro = carros.find(c => c.id === parseInt(carroId));
+
+    const container = document.getElementById('detalhes-container');
+
+    if (carro) {
+        document.title = carro.titulo;
+        const detalheHtml = `
+            <article class="detalhe-carro">
+                <h1>${carro.titulo}</h1>
+                <img src="${carro.imagem}" alt="${carro.titulo}">
+                <p>${carro.descricao}</p>
+                <a href="index.html" class="voltar-link"> ← Voltar para a página inicial</a>
+            </article>
+        `;
+        container.innerHTML = detalheHtml;
+    } else {
+    
+        container.innerHTML = `
+            <h1>Carro não encontrado!</h1>
+            <a href="index.html" class="voltar-link"> ← Voltar para a página inicial</a>
+        `;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('detalhes-container')) {
+        carregarDetalhes();
+    } else if (document.querySelector('.secao-destaque')) {
+        carregarCards();
+    }
+});

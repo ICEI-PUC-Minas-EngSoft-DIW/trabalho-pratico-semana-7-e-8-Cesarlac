@@ -199,6 +199,34 @@ main.conteudo {
 
 /* CSS Rodapé - Fim */
 
+/*ESTILOS DA PÁGINA DE DETALHES */
+.detalhe-carro {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.detalhe-carro img {
+    width: 100%;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+.detalhe-carro h1 {
+    margin-bottom: 20px;
+}
+.detalhe-carro p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+.voltar-link {
+    display: inline-block;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #1d3557;
+}
+
 @media screen and (max-width: 900px) {
 
     .cabecalho {
