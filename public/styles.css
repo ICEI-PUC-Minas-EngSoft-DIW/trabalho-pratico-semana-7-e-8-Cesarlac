@@ -87,9 +87,6 @@ main.conteudo {
 }
 
 .artigo-destaque {
-    display: flex;
-    align-items: center;
-    gap: 30px;
     margin-bottom: 40px;
 }
 
@@ -97,71 +94,114 @@ main.conteudo {
     display: flex;
     align-items: center;
     gap: 30px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 
 .artigo-destaque img {
     flex: 2;
-    height: 300px;
+    max-width: 60%;
+    height: 350px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 6px;
+}
+
+.texto-artigo-principal {
+    flex: 1;
 }
 
 .secao-inferior {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-
 }
 
-.artigos-inf {
-    display: block;
-    gap: 15px;
-    align-items: flex-start;
-    width: 100%;
+.artigo-inferior {
     background: #f8f9fa;
-    ;
     padding: 12px;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
 }
 
-.artigos-inf img {
+.artigo-inferior img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 6px;
     display: block;
+    margin-bottom: 12px;
+}
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.card {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 12px;
 }
 
 /* CSS Cabeçalho - Fim */
 
+
+
+
 /* CSS Rodapé - Inicio */
 
 .rodape {
-    display: flex;
     background-color: #1d3557;
     color: white;
-    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.rodape-conteudo {
+   max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: row;
+}
 
+.links-rodape {
+    display: flex;
+    gap: 20px;
 }
 
 .links-rodape a {
-    margin: 10px;
+    margin: 0;
 }
 
 /* CSS Rodapé - Fim */
 
-/* Breackpoints para resoluções especificas (smartphones, tablets, dispositivos pequenos) */
-
 @media screen and (max-width: 900px) {
 
-   .cabecalho {
+    .cabecalho {
         flex-direction: column;
         gap: 20px;
     }
@@ -181,12 +221,25 @@ main.conteudo {
         gap: 15px;
     }
 
-    .texto-artigo-principal {
-        min-width: 0;
-        overflow-wrap: break-word;
+     .artigo-destaque img {
+        max-width: 100%;
+        height: auto;
     }
 
     .secao-inferior {
         grid-template-columns: 1fr;
     }
+
+    .rodape-conteudo {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .links-rodape {
+        flex-direction: column;
+        align-items: center;   
+        gap: 10px;
+    }
+
 }
