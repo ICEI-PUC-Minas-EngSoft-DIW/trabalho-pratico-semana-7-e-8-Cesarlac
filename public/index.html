@@ -1,13 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Só carros</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js" defer></script>
 </head>
+
 <body>
-    <h1>Olá mundo</h1>
+    <header class="cabecalho">
+        <div class="logo">
+            <h1>SÓ CARROS</h1>
+        </div>
+
+        <div class="cabecalho-direita">
+            <form class="pesquisa">
+                <label for="pesquisar">Pesquisar</label>
+                <input type="search" id="pesquisar" name="q" placeholder="Digite aqui...">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <div class="area-usuario">
+                <a href="#">Entre</a>
+                <a href="#">Cadastre-se</a>
+            </div>
+        </div>
+
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="trabalho-pratico-semana-4-e-5-Cesarlac/destaques.html">Destaques</a></li>
+            <li><a href="#">Dicas automotivas</a></li>
+            <li><a href="#">Sobre o site</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="conteudo">
+        <section class="secao-destaque">
+            <article class="artigo-destaque">
+                <a href="#" class="link-artigo">
+                    <img src="imgs/corolla.jpg" alt="corolla">
+                    <div class="texto-artigo-principal">
+                        <h1>Toyota Corolla</h1>
+                        <p>O Toyota Corolla é sinônimo de confiabilidade e conforto. É o líder absoluto de vendas em sua
+                            categoria há muitos anos e se tornou o carro preferido de quem busca um sedã médio sem
+                            surpresas. Seu sucesso se baseia em uma reputação sólida de durabilidade, baixa
+                            desvalorização e
+                            um pós-venda elogiado.</p>
+                    </div>
+        </a>
+        </article>
+        </section>
+
+        <section class="secao-inferior">
+
+            <article class="artigos-inf">
+                <a href="#" class="link-artigo">
+                    <img src="imgs/gol.jpg" alt="gol">
+                    <div class="texto-artigo">
+                        <h2>Volkswagen Gol</h2>
+                        <p>Falar de carros no Brasil é falar do Volkswagen Gol. Lançado em 1980, ele foi o carro mais
+                            vendido do país por 27 anos consecutivos, um recorde absoluto. O Gol se tornou um ícone pela
+                            sua
+                            robustez, simplicidade mecânica e facilidade de revenda.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="artigos-inf">
+                <a href="#" class="link-artigo">
+                    <img src="imgs/onix.jpg" alt="onix">
+                    <div class="texto-artigo">
+                        <h2>Chevrolet Onix</h2>
+                        <p>O Chevrolet Onix é, há anos, um dos carros mais vendidos do Brasil e um verdadeiro fenômeno
+                            de
+                            mercado. Lançado em 2012, ele rapidamente conquistou o público com seu design moderno, bom
+                            pacote de equipamentos e baixo custo de manutenção.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="artigos-inf">
+                <a href="#" class="link-artigo">
+                    <img src="imgs/renegade.jpg" alt="renegade">
+                    <div class="texto-artigo">
+                        <h2>Jeep Renegade</h2>
+                        <p>O Jeep Renegade foi um dos principais responsáveis pela popularização dos SUVs compactos no
+                            Brasil desde seu lançamento em 2015. Com um design "quadradão" e carismático, inspirado nos
+                            clássicos da marca, ele conquistou um público que buscava um carro com visual robusto e
+                            posição
+                            de dirigir mais elevada.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="artigos-inf">
+                <a href="#" class="link-artigo">
+                    <img src="imgs/strada.jpg" alt="strada">
+                    <div class="texto-artigo">
+                        <h2>Fiat Strada</h2>
+                        <p>A Fiat Strada é a líder incontestável do mercado de picapes no Brasil e, por vezes, o veículo
+                            mais vendido do país no geral. Lançada em 1998, ela revolucionou o segmento com inovações
+                            como a
+                            cabine estendida e, posteriormente, a cabine dupla com três portas.</p>
+                    </div>
+                </a>
+            </article>
+        </section>
+    </main>
+
+
+
+    <footer class="rodape">
+        <div class="links-rodape">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de uso</a>
+            <a href="#">Anúncios</a>
+        </div>
+        <p>copyright Só Carros 2025</p>
+    </footer>
+
 </body>
+
 </html>

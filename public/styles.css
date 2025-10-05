@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f1faee;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+body,
+ul,
+li,
+p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+}
+
+button {
+    background: #e63946;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* CSS Cabeçalho - Inicio */
+
+.cabecalho {
+    background-color: #1d3557;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.cabecalho-direita {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.menu {
+    background-color: #e63946;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+main {
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+main.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.artigo-destaque {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.artigo-destaque .link-artigo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.artigo-destaque img {
+    flex: 2;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.secao-inferior {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+}
+
+.artigos-inf {
+    display: block;
+    gap: 15px;
+    align-items: flex-start;
+    width: 100%;
+    background: #f8f9fa;
+    ;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.artigos-inf img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+/* CSS Cabeçalho - Fim */
+
+/* CSS Rodapé - Inicio */
+
+.rodape {
+    display: flex;
+    background-color: #1d3557;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.links-rodape a {
+    margin: 10px;
+}
+
+/* CSS Rodapé - Fim */
+
+/* Breackpoints para resoluções especificas (smartphones, tablets, dispositivos pequenos) */
+
+@media screen and (max-width: 900px) {
+
+   .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cabecalho-direita {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .area-usuario a {
+        white-space: nowrap;
+    }
+
+    .artigo-destaque .link-artigo {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .texto-artigo-principal {
+        min-width: 0;
+        overflow-wrap: break-word;
+    }
+
+    .secao-inferior {
+        grid-template-columns: 1fr;
+    }
+}
