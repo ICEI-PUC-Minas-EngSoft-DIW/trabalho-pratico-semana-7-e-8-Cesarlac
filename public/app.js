@@ -71,8 +71,6 @@ function carregarCards() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', carregarCards);
-
 function carregarDetalhes() {
     
     const urlParams = new URLSearchParams(window.location.search);

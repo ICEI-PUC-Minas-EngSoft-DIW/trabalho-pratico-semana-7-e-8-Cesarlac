@@ -6,9 +6,51 @@
     <title>Detalhes do Carro</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <header class="cabecalho">
+        <div class="logo">
+            <h1>SÓ CARROS</h1>
+        </div>
+
+        <div class="cabecalho-direita">
+            <form class="pesquisa">
+                <label for="pesquisar">Pesquisar</label>
+                <input type="search" id="pesquisar" name="q" placeholder="Digite aqui...">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <div class="area-usuario">
+                <a href="#">Entre</a>
+                <a href="#">Cadastre-se</a>
+            </div>
+        </div>
+
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Destaques</a></li>
+            <li><a href="#">Dicas automotivas</a></li>
+            <li><a href="#">Sobre o site</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
     <main class="conteudo" id="detalhes-container">
     </main>
+
+    <footer class="rodape">
+    <div class="rodape-conteudo">
+        <div class="links-rodape">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de uso</a>
+            <a href="#">Anúncios</a>
+        </div>
+        <p>Copyright Só Carros 2025</p>
+    </div>
+</footer>
 
     <script src="app.js"></script>
 </body>
